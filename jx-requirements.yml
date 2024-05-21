@@ -20,6 +20,13 @@ spec:
     repository: jx
   - key: staging
   - key: production
+  - gitKind: github
+    gitServer: https://github.com
+    key: respository-jx
+    owner: rgarciajim1980
+    promotionStrategy: Never
+    remoteCluster: true
+    repository: respository_jx
   ingress:
     domain: ""
     kind: ingress
