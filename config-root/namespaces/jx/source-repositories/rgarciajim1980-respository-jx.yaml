@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: rgarciajim1980
+    provider: github
+    repository: respository-jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: rgarciajim1980-respository-jx
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/rgarciajim1980/respository_jx.git
+  org: rgarciajim1980
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: respository_jx
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/rgarciajim1980/respository_jx

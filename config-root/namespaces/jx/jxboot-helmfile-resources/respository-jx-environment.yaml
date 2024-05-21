@@ -1,0 +1,22 @@
+# Source: jxboot-helmfile-resources/templates/environments.yaml
+apiVersion: jenkins.io/v1
+kind: Environment
+metadata:
+  labels:
+    env: "respository-jx"
+    team: jx
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: "respository-jx"
+  annotations:
+    meta.helm.sh/release-name: 'jxboot-helmfile-resources'
+  namespace: jx
+spec:
+  source:
+    ref: "master"
+    url: https://github.com/rgarciajim1980/respository_jx.git
+  kind: Permanent
+  label: Respository-Jx
+  order: 500
+  promotionStrategy: "Never"
+  namespace: "jx-respository-jx"
+  remoteCluster: true
